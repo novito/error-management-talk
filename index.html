@@ -82,7 +82,11 @@
           <div>
             <h4> Flow of an error </h4>
             <ol>
-              <li> Joan writes a method that does `nil.fulfillment_requests` </li>
+              <li> Joan writes this method
+                <pre><code data-trim data-noescape>
+                  def imma_break() nil.fulfillment_requests end
+                </code></pre>
+              </li>
               <li> Honeybagder pings @admin-triager that a new error happened in admin </li>
               <li> Triager digs into the error and decides #FUN will own it </li>
               <li> FUN receives a message that a bug story was assigned to them </li>
